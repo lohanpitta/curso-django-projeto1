@@ -56,7 +56,9 @@ ROOT_URLCONF = 'projeto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'base_templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,6 +124,7 @@ STATICFILES_DIRS = [
     BASE_DIR / 'base_static',
 ]
 
+# Para criar um pasta com todos os arquivos static
 STATIC_ROOT = BASE_DIR / 'static'
 
 # Default primary key field type
