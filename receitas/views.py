@@ -9,4 +9,7 @@ def home(request):
 
 
 def receitas(request, id):
-    return render(request, 'receitas/paginas/receitas-view.html')
+    return render(request, 'receitas/paginas/receitas-view.html', context={
+        'receitas': [make_recipe() for _ in range(1)],
+        'is_detail_page': True,
+    })
